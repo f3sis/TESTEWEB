@@ -1,32 +1,255 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>Catálogo Digital</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatFlow Pro | Sistema de Atendimento & Código Fonte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .gradient-text { 
+            background: linear-gradient(90deg, #1e40af, #10b981); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .card-shadow { transition: all 0.3s ease; }
+        .card-shadow:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
 
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbyrlKfSs2H37HFfk2_Uu8BqEgBj8TLPHjkoSLSZQEhIDk3WO7UXTkmRXirOMo-kpmV5wA/exec"
-    loading="lazy"
-    referrerpolicy="no-referrer"
-  ></iframe>
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-blue-800 text-white p-1.5 rounded-lg">
+                        <i class="fas fa-code-branch text-xl"></i>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight text-blue-900">ChatFlow<span class="text-emerald-500">Pro</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium text-slate-600">
+                    <a href="#precos" class="hover:text-blue-700 transition">Recursos</a>
+                    <a href="#revenda" class="hover:text-blue-700 transition">Código Fonte</a>
+                    <a href="#precos" class="hover:text-blue-700 transition">Planos</a>
+                </div>
+                <a href="https://wa.me/5522997505152" class="bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2 rounded-full font-bold transition shadow-lg flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Suporte
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-b from-blue-50 to-slate-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
+                Sua Operação no WhatsApp <br>
+                <span class="gradient-text">Em Outro Nível.</span>
+            </h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Gerencie múltiplos atendentes, automatize com IA e organize seu comercial com Kanban. Use em seu negócio ou <strong>tenha o código fonte para criar seu próprio SaaS.</strong>
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <a href="#precos" class="bg-blue-800 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-900 transition shadow-xl">
+                    Ver Planos de Uso
+                </a>
+                <a href="#revenda" class="bg-white border-2 border-blue-800 text-blue-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition">
+                    Comprar Código Fonte
+                </a>
+            </div>
+            <div class="mt-16 rounded-2xl overflow-hidden shadow-2xl border-8 border-white max-w-5xl mx-auto">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Dashboard Preview" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Por que o ChatFlow Pro?</h2>
+                <p class="text-slate-500 italic">Chega de perder leads no meio de conversas bagunçadas.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Múltiplos Atendentes</h3>
+                    <p class="text-slate-600">Um único número de WhatsApp para toda a sua equipe. Distribua atendimentos de forma organizada.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dashboard em Tempo Real</h3>
+                    <p class="text-slate-600">Saiba quem está atendendo, tempo médio de resposta e volume de mensagens. Decisões baseadas em dados.</p>
+                </div>
+                <div class="p-8 border border-slate-100 rounded-2xl bg-slate-50 hover:shadow-xl transition">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Chatbots Inteligentes</h3>
+                    <p class="text-slate-600">Crie fluxos de automação para responder dúvidas frequentes 24h por dia, sem intervenção humana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-4xl font-extrabold mb-4 text-slate-900">Planos para Uso Profissional</h2>
+            <p class="text-slate-600">Escolha o plano ideal para a sua equipe escalar o atendimento.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 px-4">
+            
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                <h3 class="text-xl font-bold mb-2">Basic</h3>
+                <div class="text-3xl font-black mb-6">R$ 47,90<span class="text-sm font-normal text-slate-400">/mês</span></div>
+                <ul class="space-y-3 text-slate-600 mb-8 text-sm">
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> Conexão Multidispositivos</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> Agendamento</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> 2 Usuários / 2 Conexões</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> 5 Filas de Atendimento</li>
+                    <li><i class="fas fa-brain text-blue-500 mr-2"></i> Integração com IA</li>
+                </ul>
+                <a href="https://wa.me/5522997505152?text=Quero+o+plano+Basic" class="block text-center w-full py-3 border-2 border-blue-800 text-blue-800 font-bold rounded-xl hover:bg-blue-800 hover:text-white transition">Assinar Basic</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border-2 border-blue-800 card-shadow relative">
+                <span class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-800 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Mais Popular</span>
+                <h3 class="text-xl font-bold mb-2">Business</h3>
+                <div class="text-3xl font-black mb-6 text-blue-800">R$ 97,90<span class="text-sm font-normal text-slate-400">/mês</span></div>
+                <ul class="space-y-3 text-slate-600 mb-8 text-sm">
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> 5 Usuários / 5 Conexões</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> 10 Filas de Atendimento</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>Kanban Profissional</strong></li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> Chat Interno & Agendamento</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> Suporte Prioritário</li>
+                    <li><i class="fas fa-brain text-blue-500 mr-2"></i> Integração com IA</li>
+                </ul>
+                <a href="https://wa.me/5522997505152?text=Quero+o+plano+Business" class="block text-center w-full py-3 bg-blue-800 text-white font-bold rounded-xl hover:bg-blue-900 transition shadow-lg shadow-blue-200">Assinar Business</a>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 card-shadow text-slate-900">
+                <h3 class="text-xl font-bold mb-2">Agência</h3>
+                <div class="text-3xl font-black mb-6 text-slate-900">R$ 147,90<span class="text-sm font-normal text-slate-400">/mês</span></div>
+                <ul class="space-y-3 text-slate-600 mb-8 text-sm">
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> 10 Usuários / 10 Conexões</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> 15 Filas de Atendimento</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> <strong>Campanhas & API Externa</strong></li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> Integrações & Kanban</li>
+                    <li><i class="fas fa-check text-emerald-500 mr-2"></i> Suporte VIP</li>
+                    <li><i class="fas fa-brain text-blue-500 mr-2"></i> Integração com IA</li>
+                </ul>
+                <a href="https://wa.me/5522997505152?text=Quero+o+plano+Agencia" class="block text-center w-full py-3 border-2 border-slate-800 text-slate-800 font-bold rounded-xl hover:bg-slate-800 hover:text-white transition">Assinar Agência</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="revenda" class="py-20 bg-blue-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <span class="bg-blue-800 text-emerald-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block border border-blue-700">
+                    Oportunidade Única
+                </span>
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    Tenha o seu próprio SaaS.<br>
+                    <span class="text-emerald-400">Código Fonte + Treinamento.</span>
+                </h2>
+                <p class="text-blue-100 text-lg mb-8 leading-relaxed">
+                    Não quer apenas usar? Quer ser o dono? Nós entregamos o <strong>Código Fonte Completo</strong> do ChatFlow Pro com vídeo aulas ensinando o passo a passo da instalação e configuração.
+                </p>
+                
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                    <li class="flex items-center gap-3 text-blue-50">
+                        <i class="fas fa-play-circle text-emerald-400 text-xl"></i> 
+                        <span>Vídeo Aulas Gravadas</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-blue-50">
+                        <i class="fas fa-code text-emerald-400 text-xl"></i> 
+                        <span>Código 100% Aberto</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-blue-50">
+                        <i class="fas fa-check-circle text-emerald-400 text-xl"></i> 
+                        <span>Instalação Passo a Passo</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-blue-50">
+                        <i class="fas fa-dollar-sign text-emerald-400 text-xl"></i> 
+                        <span>Lucro 100% Seu</span>
+                    </li>
+                </ul>
+
+                <div class="flex flex-wrap items-center gap-8 p-6 bg-blue-800/40 rounded-2xl border border-blue-700">
+                    <div>
+                        <span class="block text-blue-300 line-through text-sm">De R$ 297,00</span>
+                        <span class="text-4xl font-black text-white">R$ 97,90</span>
+                        <span class="text-xs text-emerald-400 block font-bold uppercase mt-1">Pagamento Único</span>
+                    </div>
+                    <a href="https://wa.me/5522997505152?text=Quero+comprar+o+codigo+fonte" class="bg-emerald-500 hover:bg-emerald-600 text-white px-10 py-4 rounded-xl font-extrabold text-lg transition transform hover:scale-105 shadow-xl shadow-emerald-900/20">
+                        COMPRAR AGORA
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 relative">
+                <div class="absolute -inset-4 bg-emerald-500/20 blur-3xl rounded-full"></div>
+                
+                <div class="relative bg-blue-800 p-4 rounded-3xl shadow-2xl transform md:rotate-3 hover:rotate-0 transition duration-500 border border-blue-700">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Painel Administrativo" class="rounded-2xl shadow-inner">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-blue-800 text-white p-1 rounded-lg">
+                            <i class="fas fa-comments-dollar"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-blue-900">ChatFlow<span class="text-emerald-500">Pro</span></span>
+                    </div>
+                    <p class="text-slate-500 max-w-sm mb-6">Transformando a comunicação via WhatsApp em uma máquina de vendas e uma oportunidade de negócio lucrativa para agências.</p>
+                    <div class="flex gap-4 text-slate-400">
+                        <a href="#" class="hover:text-blue-600"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin text-2xl"></i></a>
+                        <a href="#" class="hover:text-blue-600"><i class="fab fa-youtube text-2xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Links</h4>
+                    <ul class="space-y-4 text-slate-500">
+                        <li><a href="#recursos" class="hover:text-blue-600">Recursos</a></li>
+                        <li><a href="#whitelabel" class="hover:text-blue-600">White Label</a></li>
+                        <li><a href="#precos" class="hover:text-blue-600">Preços</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Contato</h4>
+                    <ul class="space-y-4 text-slate-500">
+                        <li class="flex items-center gap-2"><i class="fas fa-phone text-emerald-500"></i> (22) 99750-5152</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope text-blue-500"></i> suporte@chatflowpro.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-8 text-center text-slate-400 text-sm">
+                <p>&copy; 2026 ChatFlow Pro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5522997505152" class="fixed bottom-6 right-6 bg-emerald-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
 </body>
 </html>
